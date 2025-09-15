@@ -12,6 +12,7 @@
   font-size: var(--font-size);
   min-inline-size: 375px;
   min-height: 100vh;
+  font-size: 18px;
 }
 
 .header {
@@ -309,7 +310,7 @@
     max-width: 236px;
   }
   .reply_how {
-    max-width: 470px;
+    max-width: 472px;
   }
   .cards {
     display: grid;
@@ -415,7 +416,7 @@
     flex-direction: row;
   }
   .reply_why {
-    max-width: 649px;
+    max-width: 650px;
   }
   .main_content {
     padding-inline: 20px;

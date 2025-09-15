@@ -3,25 +3,25 @@
   и их переопределение под различные устройства
 */
 :root {
- --bg-image: url(../images/cover-image-dark.png); 
- 
- --main-font:"IBM Plex Mono";
- 
- --text-color: #F1B2CE;
- --accent-color:#FF0070;
+  --bg-image: url(../images/cover-image-dark.png);
 
- --title-color:#FF0070;
- --title-bg-color:#FF0070;
+  --main-font: "IBM Plex Mono";
 
- --subtitle-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
 
- --heading-color:#DB00FF;
+  --title-color: #ff0070;
+  --title-bg-color: #ff0070;
 
- --navigation-color:#FF0070;
+  --subtitle-color: #000028;
 
- --decorated-zone-color: #FF0070;
+  --heading-color: #db00ff;
 
- --bold: 700;
- --regular: 700;
- --font-size: 18px;
+  --navigation-color: #ff0070;
+
+  --decorated-zone-color: #ff0070;
+
+  --bold: 700;
+  --regular: 700;
+  --font-size: 18px;
 }
