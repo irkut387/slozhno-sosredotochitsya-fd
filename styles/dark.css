@@ -10,4 +10,40 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url(../images/cover-image-dark.png);
+  --main-font: "IBM Plex Mono";
+
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+
+  --title-color: #ff0070;
+  --title-bg-color: #ff0070;
+
+  --subtitle-color: #000028;
+
+  --heading-color: #db00ff;
+
+  --navigation-color: #ff0070;
+
+  --decorated-zone-color: #ff0070;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url(../images/cover-image-dark.png);
+
+    --main-font: "IBM Plex Mono";
+
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+
+    --title-color: #ff0070;
+    --title-bg-color: #ff0070;
+
+    --subtitle-color: #000028;
+
+    --heading-color: #db00ff;
+
+    --navigation-color: #ff0070;
+
+    --decorated-zone-color: #ff0070;
+  }
 }

@@ -30,3 +30,19 @@
   display: none;
 }
 
+@media (prefers-color-scheme: light) {
+  :root /*.theme-auto*/ {
+    --bg-image: url(../images/cover-image-light.png);
+    --heading-color: #ffc2e6;
+    --text-color: #353430;
+    --title-color: #353430;
+    --title-bg-color: #ff8dcb;
+    --navigation-color: #353430;
+    --accent-color: #ff8dcb;
+    --decorated-zone-color: #353430;
+  }
+
+  .header__rec {
+    display: none;
+  }
+}
