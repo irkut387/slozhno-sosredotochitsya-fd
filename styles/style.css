@@ -12,7 +12,6 @@
   font-size: var(--font-size);
   min-inline-size: 375px;
   min-height: 100vh;
-  font-size: 18px;
 }
 
 .header {
