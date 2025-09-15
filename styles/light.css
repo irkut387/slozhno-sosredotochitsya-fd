@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root /*.theme-auto*/ {
     --bg-image: url(../images/cover-image-light.png);
     --heading-color: #ffc2e6;
     --text-color: #353430;
