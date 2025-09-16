@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root 
-  .header__rec-text {
-     display: inline-block;
-  }}
+  :root .header__rec-text {
+    display: inline-block;
+  }
+}
