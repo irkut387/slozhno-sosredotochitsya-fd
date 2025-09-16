@@ -26,3 +26,12 @@
 
   --decorated-zone-color: #ff0070;
 }
+.theme-dark .header__rec-text {
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root 
+  .header__rec-text {
+     display: inline-block;
+  }}

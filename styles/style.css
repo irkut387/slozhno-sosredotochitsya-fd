@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
-  background-color: var(--bg-color, #000028);
+  background-color: var(--bg-color);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -20,8 +20,9 @@
   min-height: 668px;
   align-items: flex-start;
   padding: 0 10px;
+  height: 100vh;
   position: relative;
-  padding-top: 238px;
+  padding-top: 141px;
 }
 .decorated-zone::after {
   content: "";
@@ -44,13 +45,17 @@
   left: 10px;
 }
 
-.header__rec {
+.header__rec-text {
   position: absolute;
-  top: 10px;
+  top: 11px;
   right: 19px;
-  padding-right: 19px;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--accent-color);
 }
-.header__rec::after {
+.header__rec-text::after {
   content: "";
   width: 9px;
   height: 9px;
@@ -64,13 +69,6 @@
   box-shadow: 0 0 4px 2px #ff0070;
 }
 
-.header__rec-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  color: var(--accent-color);
-}
-
 .header-title {
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--heading-color);
@@ -80,13 +78,17 @@
   line-height: 82%;
   letter-spacing: -2.5px;
   margin-bottom: 51px;
+  position: relative;
 }
 
-/* position:absolute; */
 .header__theme-menu {
-  position: absolute;
-  top: 75px;
+  /*top: 75px;
   right: 10px;
+position: absolute;*/
+  justify-self: center;
+  position: relative;
+  top: -66px;
+  right: -286px;
 }
 
 .header__theme-menu-list {
@@ -129,12 +131,13 @@
   color: var(--title-color);
   font-family: inherit;
   font-size: inherit;
+  line-height: 126%;
 }
 
 .reply_title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 130%;
+  line-height: 136%;
 }
 
 .reply_what {
@@ -143,7 +146,7 @@
   gap: 20px;
 }
 
-.reply_how {
+.reply_container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -152,6 +155,7 @@
   color: var(--accent-color);
   font-family: inherit;
   font-weight: var(--regular) !important;
+  line-height: 135%;
 }
 
 .header_text {
@@ -159,6 +163,7 @@
   font-weight: bold;
   max-inline-size: 355px;
   grid-row: 3 / 4;
+  position: relative;
 }
 
 .title-decor {
@@ -176,7 +181,11 @@
   gap: 20px;
 }
 
-.content_section .reply_why {
+.section_what {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content_section .reply_container {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -249,7 +258,7 @@
   outline: none;
 }
 .reply_text-link:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid var(--text-color);
   text-underline-offset: 2px;
 }
 
@@ -259,12 +268,12 @@
 
 @media (width >= 768px) {
   .header {
-    padding-top: 463px;
+    padding-top: 370px;
     padding-left: 0;
     min-height: 1024px;
     padding-right: 20px;
   }
-  .header__rec {
+  .header__rec-text {
     top: 20px;
     right: 29px;
   }
@@ -279,8 +288,8 @@
     bottom: 20px;
   }
   .header__theme-menu {
-    top: 192px;
-    right: 20px;
+    top: -179px;
+    right: -678px;
   }
   .header-title {
     letter-spacing: 0;
@@ -294,9 +303,7 @@
   .content_section {
     flex-direction: row;
   }
-  .reply_why {
-    max-width: 472px;
-  }
+
   .main_content {
     padding-inline: 20px;
     padding-block-start: 60px;
@@ -308,8 +315,14 @@
   .what_title {
     max-width: 236px;
   }
-  .reply_how {
+  .reply_container {
     max-width: 472px;
+  }
+  .reply_title {
+    line-height: 135%;
+  }
+  .reply_title-advice {
+    line-height: 138%;
   }
   .cards {
     display: grid;
@@ -363,7 +376,7 @@
   }
   .footer_title {
     font-weight: 700;
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 83%;
   }
 }
@@ -374,7 +387,7 @@
     min-height: 768px;
     padding-right: 20px;
   }
-  .header__rec {
+  .header__rec-text {
     top: 20px;
     right: 29px;
   }
@@ -389,10 +402,15 @@
     bottom: 20px;
   }
   .header__theme-menu {
-    top: 20px;
+    top: -300px;
     right: 0;
-    left: 0;
+    left: 11px;
     margin: auto;
+    height: 100%;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-self: start;
   }
   .header__theme-menu-list {
     justify-content: space-between;
@@ -405,17 +423,22 @@
   .header-title {
     letter-spacing: 0;
     margin-bottom: 115px;
+    top: -134px;
   }
 
   .header_text {
     margin-left: auto;
     max-inline-size: 491px;
+    top: -135px;
   }
   .content_section {
     flex-direction: row;
   }
-  .reply_why {
+  .reply_container {
     max-width: 650px;
+  }
+  .reply_title-advice {
+    line-height: 137%;
   }
   .main_content {
     padding-inline: 20px;
@@ -434,9 +457,7 @@
   .reply_what {
     flex-direction: row;
   }
-  .reply_how {
-    max-width: 649px;
-  }
+
   .footer {
     min-height: 768px;
   }
@@ -452,7 +473,7 @@
 
   .footer_title {
     font-weight: 700;
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 83%;
   }
 }

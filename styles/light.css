@@ -24,9 +24,10 @@
   --accent-color: #ff8dcb;
 
   --decorated-zone-color: #353430;
+  --subtitle-color: #353430;
 }
 
-.theme-light .header__rec {
+.theme-light .header__rec-text {
   display: none;
 }
 
@@ -40,9 +41,10 @@
     --navigation-color: #353430;
     --accent-color: #ff8dcb;
     --decorated-zone-color: #353430;
+    --subtitle-color: #353430;
   }
 
-  .header__rec {
-    display: none;
+  .header__rec-text {
+   display: none;
   }
 }
