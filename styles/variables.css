@@ -4,7 +4,7 @@
 */
 :root {
   --bg-image: url(../images/cover-image-dark.png);
-
+  --bg-color:#000028;
   --main-font: "IBM Plex Mono";
 
   --text-color: #f1b2ce;
